@@ -1,28 +1,47 @@
-/* style.css */
+/* Base styling */
 body {
   font-family: Georgia, serif;
-  margin: 2em;
-  background-color: #fff;
-  color: #333;
+  background-color: #ffffff;
+  color: #000000;
   max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
   line-height: 1.6;
 }
 
-header h1 {
-  font-size: 2em;
-  margin-bottom: 0;
-}
-
-header p {
-  font-style: italic;
-  margin-top: 0;
-}
-
-section {
+/* Headings */
+h1, h2 {
+  font-weight: normal;
   margin-top: 2em;
+  color: #000000;
 }
 
+/* Links */
 a {
-  color: #0066cc;
+  color: #0000EE;
   text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+ul {
+  padding-left: 1.2em;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 1em;
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
 }
