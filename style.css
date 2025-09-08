@@ -111,12 +111,6 @@ body {
   color: #fff;
 }
 
-/* Optional Icons (customize as needed) */
-.section-nav li a::before {
-  content: "📌";
-  margin-right: 0.5rem;
-}
-
 /* Profile Image */
 .sidebar img {
   width: 120px;
