@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <title>Teaching</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="dark">
+<body>
   <nav class="top-nav">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -16,10 +16,37 @@
   </nav>
 
   <div class="container">
-    <div class="main">
-      <h1>Header TBD</h1>
-      <p>Under construction</p>
-    </div>
+    <aside class="sidebar">
+      <img src="annuska.jpg" alt="Annuska Zolyomi" class="profile-pic" />
+      <ul>
+        <li><a href="mailto:annuska@uw.edu">Email</a></li>
+        <li><a href="https://scholar.google.com/citations?hl=en&user=fCi4WuYAAAAJ" target="_blank">Google Scholar</a></li>
+        <li><a href="https://github.com/IDEALLab" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/annuskap" target="_blank">LinkedIn</a></li>
+        <li><a href="https://twitter.com/AnnuskaP" target="_blank">X (formerly Twitter)</a></li>
+      </ul>
+      <button id="theme-toggle" class="toggle-btn">Toggle Dark Mode</button>
+    </aside>
+
+    <main class="main">
+      <h1>Teaching</h1>
+      <p>I teach courses on human-centered design, disability studies, and research methods. My pedagogy emphasizes critical thinking, community engagement, and reflective practice.</p>
+      <ul>
+        <li>DIS ST 230: Disability and Technology</li>
+        <li>HCDE 518: Inclusive Design Studio</li>
+        <li>Guest lectures in HCI and STS programs</li>
+      </ul>
+    </main>
   </div>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn?.addEventListener('click', () => {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', currentTheme === 'dark" ? "light" : "dark");
+    });
+  </script>
 </body>
 </html>
+
