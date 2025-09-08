@@ -2,102 +2,65 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Annuska Zolyomi</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const current = html.getAttribute("data-theme");
-      html.setAttribute("data-theme", current === "dark" ? "light" : "dark");
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggleBtn = document.querySelector(".toggle-btn");
-      toggleBtn.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          toggleTheme();
-        }
-      });
-
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll(".top-nav a");
-
-      window.addEventListener("scroll", () => {
-        let current = "";
-        sections.forEach(section => {
-          const top = section.offsetTop - 100;
-          if (window.scrollY >= top) {
-            current = section.getAttribute("id");
-          }
-        });
-
-        navLinks.forEach(link => {
-          link.classList.remove("active");
-          if (link.getAttribute("href").includes(current)) {
-            link.classList.add("active");
-          }
-        });
-      });
-    });
-  </script>
 </head>
 <body>
   <nav class="top-nav">
     <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="lab.html">Lab</a></li>
+      <li><a href="#research" class="active">Research</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#lab">Lab</a></li>
     </ul>
   </nav>
 
   <div class="container">
-    <div class="sidebar">
-      <img src="annuska.jpg" alt="Annuska Zolyomi" />
-      <h2>Contact</h2>
-      <p><a href="mailto:annuska@uw.edu">annuska@uw.edu</a></p>
+    <aside class="sidebar">
+      <img src="profile.jpg" alt="Annuska Zolyomi" />
       <ul>
-        <li><a href="https://www.uwb.edu/stem/faculty/css-faculty/azolyomi">UW Faculty Profile</a></li>
-        <li><a href="https://scholar.google.com/citations?hl=en&user=fCi4WuYAAAAJ">Google Scholar</a></li>
-        <li><a href="https://github.com/IDEALLab">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/annuskap">LinkedIn</a></li>
-        <li><a href="https://twitter.com/AnnuskaP">X (formerly Twitter)</a></li>
-        <li><a href="cv.pdf" download>Download CV</a></li>
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="toggle-btn" tabindex="0">Toggle Dark Mode</button>
-    </div>
+      <button id="theme-toggle" class="toggle-btn">Toggle Dark Mode</button>
+    </aside>
 
-    <div class="main">
-      <h1>Annuska Zolyomi</h1>
-      <p>I am an educator, user experience researcher and designer, and accessibility specialist.</p>
-
-      <section id="experience">
-        <h2>My Experience</h2>
-        <p>I am an Assistant Professor at the University of Washington Bothell. I hold a PhD in Information Science and a Master’s in Human-Centered Design and Engineering. My industry experience includes roles as a program manager, product planner, and accessibility strategist.</p>
-        <p>I’ve consulted for technology user experience projects since 2013, working with clients such as Microsoft, Amazon, Easter Seals, and the Joan Ganz Cooney Center at Sesame Workshop.</p>
+    <main class="main">
+      <section id="bio">
+        <h1>Annuska Zolyomi</h1>
+        <p>Welcome to my academic website. I study inclusive technology design, disability studies, and human-computer interaction.</p>
       </section>
 
-      <section id="skillset">
-        <h2>My Skillset</h2>
-        <p>I specialize in inclusive human-computer interaction (HCI), leading research and design initiatives to create intuitive and innovative technology products. My methods include participatory design and grounded research approaches.</p>
-        <p>My doctoral work focused on communication and affective computing that reflects the social, emotional, and sensory experiences of autistic adults.</p>
+      <section id="research">
+        <h2>Research</h2>
+        <p>Details about current projects, publications, and collaborations.</p>
       </section>
 
-      <section id="goals">
-        <h2>My Goals</h2>
-        <p>I aim to bring an inclusive lens to HCI and software engineering pedagogy. Through scholarship and collaboration, I work with diverse, creative teams to advance knowledge, education, and technology for social good.</p>
+      <section id="teaching">
+        <h2>Teaching</h2>
+        <p>Courses taught, syllabi, and student resources.</p>
       </section>
 
-      <section id="highlights">
-        <h2>Featured Highlights</h2>
-        <ul>
-          <li><a href="https://gizmodo.com/why-autistic-people-are-turning-to-virtual-reality-1849392086" target="_blank">Quoted in Gizmodo: Why Autistic People Are Turning to Virtual Reality</a></li>
-          <li><a href="https://www.autism.org/autism-stories-annuska-zolyomi/" target="_blank">Autism Stories Interview</a></li>
-        </ul>
+      <section id="lab">
+        <h2>Lab</h2>
+        <p>Information about lab members, ongoing work, and opportunities.</p>
       </section>
-    </div>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: annuska@example.edu</p>
+      </section>
+    </main>
   </div>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+    });
+  </script>
 </body>
 </html>
