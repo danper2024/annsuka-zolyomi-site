@@ -34,13 +34,8 @@
     <div class="right-column">
       <h1>Annuska Zolyomi</h1>
       <p>Annuska Zolyomi is an Assistant Professor at the University of Washington Bothell, specializing in user experience research, inclusive design, and accessibility. With a background in industry and academia, she brings a human-centered lens to technology development and pedagogy. Her work explores how design can reflect the emotional, sensory, and social experiences of diverse communities, especially autistic adults.</p>
-    </div>
-  </div>
 
-  <hr class="divider" />
-
-  <!-- Main Content -->
-  <main class="main">
+      <hr class="divider" />
 
       <!-- Internal Section Navigation -->
       <nav>
@@ -52,6 +47,7 @@
         </ul>
       </nav>
 
+      <!-- Page Sections -->
       <section id="experience">
         <h2>My Experience</h2>
         <p>I am an Assistant Professor at the University of Washington Bothell. I have a PhD in Information Science and a Master in Human-Centered Design and Engineering. I’ve worked in tech as a program manager, product planner, and accessibility strategist.</p>
@@ -68,7 +64,7 @@
         <p>I aim to bring an inclusive lens to HCI and software engineering pedagogy. I collaborate with diverse teams to develop technology for social good through scholarship and community engagement.</p>
       </section>
 
-      <section id="highlights">
+      <section id="collaboration">
         <h2>Highlights & Collaborations</h2>
         <ul>
           <li>Quoted in Gizmodo on sarcasm detection and autism discourse</li>
@@ -77,12 +73,12 @@
           <li>Portfolio includes SmartWheels, Responsive e-skirt, and Ease of Access in Windows</li>
         </ul>
       </section>
-    </main>
+    </div>
   </div>
 
   <script>
     const toggleBtn = document.getElementById('theme-toggle');
-    toggleBtn.addEventListener('click', () => {
+    toggleBtn?.addEventListener('click', () => {
       const html = document.documentElement;
       const currentTheme = html.getAttribute('data-theme');
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
