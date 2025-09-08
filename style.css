@@ -111,6 +111,26 @@ body {
   color: #fff;
 }
 
+/* Intro Block Layout */
+.intro-block {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 1rem;
+  flex-wrap: wrap;
+}
+
+.intro-img {
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 250px;
+}
+
 /* Profile Image */
 .sidebar img {
   width: 120px;
@@ -190,5 +210,14 @@ ul {
   .section-nav li a {
     width: 100%;
     text-align: center;
+  }
+
+  .intro-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text {
+    margin-top: 1rem;
   }
 }
