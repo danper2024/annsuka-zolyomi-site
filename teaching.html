@@ -39,13 +39,15 @@
     </main>
   </div>
 
-  <script>
-    const toggleBtn = document.getElementById('theme-toggle');
-    toggleBtn?.addEventListener('click', () => {
-      const html = document.documentElement;
-      const currentTheme = html.getAttribute('data-theme');
-      html.setAttribute('data-theme', currentTheme === 'dark" ? "light" : "dark");
-    });
-  </script>
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn?.addEventListener('click', () => {
+    const html = document.documentElement;
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', newTheme);
+  });
+</script>
+
 </body>
 </html>
