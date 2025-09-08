@@ -57,7 +57,7 @@ body {
   padding: 1rem;
 }
 
-/* Navigation */
+/* Top Navigation */
 .top-nav {
   background-color: var(--nav-bg);
   padding: 1rem;
@@ -79,6 +79,42 @@ body {
 
 .top-nav a.active {
   border-bottom: 2px solid var(--link);
+}
+
+/* Section Navigation */
+.section-nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 2rem 0;
+  background-color: var(--nav-bg);
+  border-radius: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.section-nav li a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: var(--btn-bg);
+  color: var(--text);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.section-nav li a:hover {
+  background-color: var(--link);
+  color: #fff;
+}
+
+/* Optional Icons (customize as needed) */
+.section-nav li a::before {
+  content: "📌";
+  margin-right: 0.5rem;
 }
 
 /* Profile Image */
@@ -150,5 +186,15 @@ ul {
 
   .sidebar {
     margin-bottom: 2rem;
+  }
+
+  .section-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-nav li a {
+    width: 100%;
+    text-align: center;
   }
 }
