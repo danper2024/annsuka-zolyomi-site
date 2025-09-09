@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Top Navigation -->
   <nav class="top-nav">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -16,9 +15,7 @@
     </ul>
   </nav>
 
-  <!-- Page Layout -->
   <div class="page-layout">
-    <!-- Left Column -->
     <div class="left-column">
       <img src="annuska.jpg" alt="Annuska Zolyomi" class="profile-pic" />
       <ul class="contact-links">
@@ -31,10 +28,9 @@
       <button id="theme-toggle" class="toggle-btn">Toggle Dark Mode</button>
     </div>
 
-    <!-- Right Column -->
     <div class="right-column">
-      <h1>Research</h1>
-      <p>Annuska Zolyomi’s research explores inclusive design, disability studies, and human-computer interaction. Her work centers on co-designing technologies with marginalized communities and challenging ableist assumptions in tech development.</p>
+      <h1 style="margin-top: 0;">Research</h1>
+      <p style="margin-top: 0;">Annuska Zolyomi’s research explores inclusive design, disability studies, and human-computer interaction. Her work centers on co-designing technologies with marginalized communities and challenging ableist assumptions in tech development.</p>
 
       <section>
         <h2>Research Themes</h2>
@@ -56,14 +52,12 @@
     </div>
   </div>
 
-  <!-- Theme Toggle Script -->
   <script>
     const toggleBtn = document.getElementById('theme-toggle');
     toggleBtn?.addEventListener('click', () => {
       const html = document.documentElement;
       const currentTheme = html.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', newTheme);
+      html.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
     });
   </script>
 </body>
