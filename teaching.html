@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Top Navigation -->
   <nav class="top-nav">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -15,10 +16,12 @@
     </ul>
   </nav>
 
-  <div class="container">
-    <aside class="sidebar">
+  <!-- Page Layout -->
+  <div class="page-layout">
+    <!-- Left Column -->
+    <div class="left-column">
       <img src="annuska.jpg" alt="Annuska Zolyomi" class="profile-pic" />
-      <ul>
+      <ul class="contact-links">
         <li><a href="mailto:annuska@uw.edu">Email</a></li>
         <li><a href="https://scholar.google.com/citations?hl=en&user=fCi4WuYAAAAJ" target="_blank">Google Scholar</a></li>
         <li><a href="https://github.com/IDEALLab" target="_blank">GitHub</a></li>
@@ -26,28 +29,38 @@
         <li><a href="https://twitter.com/AnnuskaP" target="_blank">X (formerly Twitter)</a></li>
       </ul>
       <button id="theme-toggle" class="toggle-btn">Toggle Dark Mode</button>
-    </aside>
+    </div>
 
-    <main class="main">
+    <!-- Right Column -->
+    <div class="right-column">
       <h1>Teaching</h1>
-      <p>I teach courses on human-centered design, disability studies, and research methods. My pedagogy emphasizes critical thinking, community engagement, and reflective practice.</p>
-      <ul>
-        <li>DIS ST 230: Disability and Technology</li>
-        <li>HCDE 518: Inclusive Design Studio</li>
-        <li>Guest lectures in HCI and STS programs</li>
-      </ul>
-    </main>
+      <p>Annuska Zolyomi teaches courses on inclusive design, disability studies, and human-centered computing. Her pedagogy emphasizes critical reflection, participatory methods, and community engagement.</p>
+
+      <section>
+        <h2>Courses Taught</h2>
+        <ul>
+          <li>INFO 360: Design Thinking</li>
+          <li>INFO 474: Inclusive Tech & Accessibility</li>
+          <li>INFO 200: Intellectual Foundations of Informatics</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Teaching Philosophy</h2>
+        <p>Annuska fosters a classroom environment that values lived experience, challenges dominant narratives, and encourages students to co-create knowledge. She integrates universal design principles and invites students to reflect on the social impact of technology.</p>
+      </section>
+    </div>
   </div>
 
-<script>
-  const toggleBtn = document.getElementById('theme-toggle');
-  toggleBtn?.addEventListener('click', () => {
-    const html = document.documentElement;
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', newTheme);
-  });
-</script>
-
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn?.addEventListener('click', () => {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+    });
+  </script>
 </body>
 </html>
