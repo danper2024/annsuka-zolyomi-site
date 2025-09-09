@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Top Navigation -->
   <nav class="top-nav">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -15,10 +16,12 @@
     </ul>
   </nav>
 
-  <div class="container">
-    <aside class="sidebar">
+  <!-- Page Layout -->
+  <div class="page-layout">
+    <!-- Left Column -->
+    <div class="left-column">
       <img src="annuska.jpg" alt="Annuska Zolyomi" class="profile-pic" />
-      <ul>
+      <ul class="contact-links">
         <li><a href="mailto:annuska@uw.edu">Email</a></li>
         <li><a href="https://scholar.google.com/citations?hl=en&user=fCi4WuYAAAAJ" target="_blank">Google Scholar</a></li>
         <li><a href="https://github.com/IDEALLab" target="_blank">GitHub</a></li>
@@ -26,9 +29,10 @@
         <li><a href="https://twitter.com/AnnuskaP" target="_blank">X (formerly Twitter)</a></li>
       </ul>
       <button id="theme-toggle" class="toggle-btn">Toggle Dark Mode</button>
-    </aside>
+    </div>
 
-    <main class="main">
+    <!-- Right Column -->
+    <div class="right-column">
       <h1>Inclusive Tech Lab</h1>
       <p>This space supports collaborative research, design, and advocacy. We work with community partners to prototype accessible tools and challenge dominant narratives in tech.</p>
       <ul>
@@ -36,19 +40,19 @@
         <li>Projects: Accessible journaling apps, sensory-friendly web design</li>
         <li>Open to new collaborators and student researchers</li>
       </ul>
-    </main>
+    </div>
   </div>
 
-<script>
-  const toggleBtn = document.getElementById('theme-toggle');
-  toggleBtn?.addEventListener('click', () => {
-    const html = document.documentElement;
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', newTheme);
-  });
-</script>
-
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn?.addEventListener('click', () => {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+    });
+  </script>
 </body>
 </html>
 
