@@ -33,13 +33,28 @@
 
     <!-- Right Column -->
     <div class="right-column">
-      <h1>Inclusive Tech Lab</h1>
-      <p>This space supports collaborative research, design, and advocacy. We work with community partners to prototype accessible tools and challenge dominant narratives in tech.</p>
-      <ul>
-        <li>Current members: UX designers, disability activists, HCI researchers</li>
-        <li>Projects: Accessible journaling apps, sensory-friendly web design</li>
-        <li>Open to new collaborators and student researchers</li>
-      </ul>
+      <h1 style="margin-top: 0;">Inclusive Tech Lab</h1>
+
+      <section>
+        <h2>Lab Purpose</h2>
+        <p>This space supports collaborative research, design, and advocacy. We work with community partners to prototype accessible tools and challenge dominant narratives in tech.</p>
+        <ul>
+          <li>Current members: UX designers, disability activists, HCI researchers</li>
+          <li>Projects: Accessible journaling apps, sensory-friendly web design</li>
+          <li>Open to new collaborators and student researchers</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Line Pictures</h2>
+        <img src="https://github.com/danper2024/annsuka-zolyomi-site/raw/main/AnnuskaZolyomi_lines.jpg" alt="Line drawing of Annuska Zolyomi" style="max-width: 100%; border-radius: 8px; box-shadow: 0 0 6px rgba(0,0,0,0.2); margin: 1rem 0;" />
+        <p>This was drawn by lines and converted to a picture.</p>
+      </section>
+
+      <section>
+        <h2>Lab Placeholder</h2>
+        <p>We will update this text later.</p>
+      </section>
     </div>
   </div>
 
@@ -49,11 +64,8 @@
     toggleBtn?.addEventListener('click', () => {
       const html = document.documentElement;
       const currentTheme = html.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', newTheme);
+      html.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
     });
   </script>
 </body>
 </html>
-
-
