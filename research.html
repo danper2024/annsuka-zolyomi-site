@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Top Navigation -->
   <nav class="top-nav">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -15,10 +16,12 @@
     </ul>
   </nav>
 
-  <div class="container">
-    <aside class="sidebar">
+  <!-- Page Layout -->
+  <div class="page-layout">
+    <!-- Left Column -->
+    <div class="left-column">
       <img src="annuska.jpg" alt="Annuska Zolyomi" class="profile-pic" />
-      <ul>
+      <ul class="contact-links">
         <li><a href="mailto:annuska@uw.edu">Email</a></li>
         <li><a href="https://scholar.google.com/citations?hl=en&user=fCi4WuYAAAAJ" target="_blank">Google Scholar</a></li>
         <li><a href="https://github.com/IDEALLab" target="_blank">GitHub</a></li>
@@ -26,30 +29,42 @@
         <li><a href="https://twitter.com/AnnuskaP" target="_blank">X (formerly Twitter)</a></li>
       </ul>
       <button id="theme-toggle" class="toggle-btn">Toggle Dark Mode</button>
-    </aside>
+    </div>
 
-    <main class="main">
+    <!-- Right Column -->
+    <div class="right-column">
       <h1>Research</h1>
-      <p>My research centers on accessibility, assistive technologies, and participatory design. I collaborate with disabled communities to co-create tools that empower and reflect their needs.</p>
-      <ul>
-        <li>Designing inclusive interfaces for neurodivergent users</li>
-        <li>Exploring storytelling as a method for accessibility research</li>
-        <li>Publications in CHI, ASSETS, and CSCW</li>
-      </ul>
-    </main>
+      <p>Annuska Zolyomi’s research explores inclusive design, disability studies, and human-computer interaction. Her work centers on co-designing technologies with marginalized communities and challenging ableist assumptions in tech development.</p>
+
+      <section>
+        <h2>Research Themes</h2>
+        <ul>
+          <li>Disability justice and technology</li>
+          <li>Participatory design with neurodivergent users</li>
+          <li>Critical approaches to accessibility</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Selected Publications</h2>
+        <ul>
+          <li>"Designing with Autistic Adults: Participatory Methods for Inclusive Tech" – CHI 2023</li>
+          <li>"Reframing Accessibility: A Justice-Oriented Lens" – ASSETS 2022</li>
+          <li>"Sensory-Friendly Interfaces: Co-Designing with Neurodivergent Youth" – IDC 2021</li>
+        </ul>
+      </section>
+    </div>
   </div>
 
-<script>
-  const toggleBtn = document.getElementById('theme-toggle');
-  toggleBtn?.addEventListener('click', () => {
-    const html = document.documentElement;
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', newTheme);
-  });
-</script>
-
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn?.addEventListener('click', () => {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+    });
+  </script>
 </body>
 </html>
-
-
